@@ -22,7 +22,7 @@ namespace Practica_N__1
 
         public bool SosIgual(Comparable com)
         {
-            if(com == (Numero)com) 
+            if(this.valor == ((Numero)com).GetValor()) 
             {
                 return true;
             }
@@ -31,7 +31,7 @@ namespace Practica_N__1
 
         public bool SosMayor(Comparable com)
         {
-            if (this.valor > (int)com) 
+            if (this.valor < ((Numero)com).GetValor()) 
             {
                 return true;
             }
@@ -40,11 +40,15 @@ namespace Practica_N__1
 
         public bool SosMenor(Comparable com)
         {
-            if (com < (Numero)com)
+            if (this.valor > ((Numero)com).GetValor())
             {
                 return true;
             }
             return false;
+        }
+        public override string ToString()
+        {
+            return this.valor.ToString();
         }
     }
 }
