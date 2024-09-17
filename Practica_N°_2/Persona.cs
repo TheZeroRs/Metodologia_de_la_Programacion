@@ -27,29 +27,17 @@ namespace Practica_N__2
 
         public virtual bool SosMenor(Comparable com) 
         {
-            if (this.dni > ((Persona)com).GetDni()) 
-            {
-                return true;
-            }
-            return false;
+            return this.dni > ((Persona)com).GetDni();
         }
 
         public virtual bool SosMayor(Comparable com) 
         {
-            if (this.dni < ((Persona)com).GetDni())
-            {
-                return true;
-            }
-            return false;
+            return this.dni < ((Persona)com).GetDni();
         }
 
         public virtual bool SosIgual(Comparable com) 
         {
-            if (this.dni == ((Persona)com).GetDni())
-            {
-                return true;
-            }
-            return false;
+            return this.dni == ((Persona)com).GetDni();
         }
         public override string ToString()
         {
