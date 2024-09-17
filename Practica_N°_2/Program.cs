@@ -99,9 +99,15 @@ namespace Practiva_N__2
 
         public static void CambiarEstrategia(Coleccionable col, EstrategiaDeComparacion estrategia)
         {
-            foreach (var item in )
+            Iterador ite = col.CrearIterador();
+            ite.Primero();
+            while (!ite.Fin()) 
             {
-                
+                if(ite.Actual() is Alumno alumno) 
+                {
+                    alumno.setEstrategia(estrategia);
+                }
+                ite.Siguiente();
             }
         }
     }

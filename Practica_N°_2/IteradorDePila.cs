@@ -18,22 +18,29 @@ namespace Practica_N__2
 
         public void Primero()
         {
-            this.indice = 0;
+            this.indice = p.Cuantos() - 1;
         }
         
         public void Siguiente()
         {
-            this.indice++;
+            this.indice--;
         }
 
         public bool Fin()
         {
-            return this.indice >= p.Cuantos();
+            return this.indice < 0;
         }
 
         public Comparable Actual()
         {
-           return this.p.GetElementos()[indice];
+            if (indice >= 0 && indice < p.Cuantos())
+            {
+                return this.p.GetElementos()[indice];
+            }
+            else
+            {
+                throw new InvalidOperationException("No hay más elementos en la pila.");
+            }
         }
     } 
 

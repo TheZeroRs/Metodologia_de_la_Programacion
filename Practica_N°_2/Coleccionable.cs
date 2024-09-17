@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Practica_N__2
 {
-    public interface Coleccionable: Iterable
+    public interface Coleccionable : Iterable
     {
         int Cuantos();
         Comparable Minimo();
