@@ -1,8 +1,8 @@
-﻿using Practica_N__1;
+﻿using Practica_N__2;
 using System;
 using System.Xml.Linq;
 
-namespace Practiva_N__1
+namespace Practiva_N__2
 {
     class Program
     {
@@ -13,27 +13,29 @@ namespace Practiva_N__1
             Pila pila = new Pila();
             Cola cola = new Cola();
             ColeccionMultiple multipleCol = new ColeccionMultiple(pila, cola);
-            //Llenar(pila);
-            //Informar(pila);
-            //Llenar(cola);
-            //Informar(cola);
-            //Informar(multipleCol);
-            //LlenarPersonas(pila);
-            //LlenarPersonas(cola);
+
             LlenarAlumnos(pila);
             LlenarAlumnos(cola);
-            Informar(multipleCol);
+
+            ImprimirELementos(pila);
+            ImprimirELementos(cola);
+            EstrategiaDeComparacion estrategia = new ComPorLegajo();
+            CambiarEstrategia(pila, estrategia);
+
+
+
+
         }
 
         public static void Llenar(Coleccionable col)
         {
-            for (int i = 0; i < 20; i++) 
+            for (int i = 0; i < 20; i++)
             {
                 Comparable aux = new Numero(i + 1);
                 col.Agregar(aux);
             }
         }
-        public static void Informar(Coleccionable col) 
+        public static void Informar(Coleccionable col)
         {
             Console.WriteLine(col.Cuantos());
             Console.WriteLine(col.Minimo());
@@ -43,7 +45,7 @@ namespace Practiva_N__1
             //int num = int.Parse(Console.ReadLine());
             //Comparable com = new Numero(num);
             //if (col.Contiene(com)) 
-            //{ 
+            //{
             //    Console.WriteLine("El elemento leído está en la colección");
             //}
             //else 
@@ -52,7 +54,7 @@ namespace Practiva_N__1
             //}
         }
 
-        public static void LlenarPersonas(Coleccionable col) 
+        public static void LlenarPersonas(Coleccionable col)
         {
             string[] nombres = { "Ana", "Luis", "Carlos", "Maria", "José", "Laura", "Pedro", "Sofía", "Juan", "Isabel",
                                  "Miguel", "Carmen", "David", "Patricia", "Jorge", "Marta", "Francisco", "Lucía", "Antonio", "Claudia" };
@@ -67,7 +69,7 @@ namespace Practiva_N__1
             }
         }
 
-        public static void LlenarAlumnos(Coleccionable col) 
+        public static void LlenarAlumnos(Coleccionable col)
         {
             string[] nombres = { "Ana", "Luis", "Carlos", "Maria", "José", "Laura", "Pedro", "Sofía", "Juan", "Isabel",
                                  "Miguel", "Carmen", "David", "Patricia", "Jorge", "Marta", "Francisco", "Lucía", "Antonio", "Claudia" };
@@ -78,10 +80,29 @@ namespace Practiva_N__1
                 int dni = random.Next(400000000, 500000000);
                 int legajo = random.Next(2000, 30000);
                 int promedio = random.Next(0, 10);
-                Comparable com = new Alumno(nombre, dni, legajo, promedio);
+                EstrategiaDeComparacion estrategia = new ComPorLegajo();
+                Comparable com = new Alumno(nombre, dni, legajo, promedio, estrategia);
                 col.Agregar(com);
             }
         }
 
+        public static void ImprimirELementos(Coleccionable col)
+        {
+            Iterador ite = col.CrearIterador();
+            ite.Primero();
+            while (!ite.Fin())
+            {
+                Console.WriteLine(ite.Actual());
+                ite.Siguiente();
+            }
+        }
+
+        public static void CambiarEstrategia(Coleccionable col, EstrategiaDeComparacion estrategia)
+        {
+            foreach (var item in )
+            {
+                
+            }
+        }
     }
 }
