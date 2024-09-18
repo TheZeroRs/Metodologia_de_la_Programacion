@@ -92,7 +92,7 @@ namespace Practiva_N__2
             ite.Primero();
             while (!ite.Fin())
             {
-                Console.WriteLine(ite.Actual());
+                Console.WriteLine("El elemento actual es: " + ite.Actual());
                 ite.Siguiente();
             }
         }

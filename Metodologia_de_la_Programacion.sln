@@ -5,7 +5,9 @@ VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Practica_N°_1", "Practica_N°_1\Practica_N°_1.csproj", "{CAD08532-5AB5-41E0-A611-134E016FFF15}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practica_N°_2", "Practica_N°_2\Practica_N°_2.csproj", "{F37F8B0F-2085-44C1-B6FF-4B11903FEA6F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Practica_N°_2", "Practica_N°_2\Practica_N°_2.csproj", "{F37F8B0F-2085-44C1-B6FF-4B11903FEA6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practica_N°_3", "Practica_N°_3\Practica_N°_3.csproj", "{9CEFD61F-E331-41B0-9B77-AA49379CFC99}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{F37F8B0F-2085-44C1-B6FF-4B11903FEA6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F37F8B0F-2085-44C1-B6FF-4B11903FEA6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F37F8B0F-2085-44C1-B6FF-4B11903FEA6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CEFD61F-E331-41B0-9B77-AA49379CFC99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CEFD61F-E331-41B0-9B77-AA49379CFC99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CEFD61F-E331-41B0-9B77-AA49379CFC99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CEFD61F-E331-41B0-9B77-AA49379CFC99}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
