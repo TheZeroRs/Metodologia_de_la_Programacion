@@ -15,6 +15,8 @@ namespace Practica_N__4
             {
                 Comparable alumno = FabricaDeComparables.CrearAleatorio(1);
                 AlumnoAdaptado adaptado = new AlumnoAdaptado((Alumno)alumno);
+
+                IAlumno legajo = new DecoradorAlumnoLegajo(adaptado);
                 teacher.goToClass(adaptado);
             }
 

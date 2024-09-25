@@ -1,9 +1,10 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
+# Visual Studio 2012
+# SharpDevelop 4.4
 VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Practica_N°_1", "Practica_N°_1\Practica_N°_1.csproj", "{CAD08532-5AB5-41E0-A611-134E016FFF15}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practica_N°_1", "Practica_N°_1\Practica_N°_1.csproj", "{CAD08532-5AB5-41E0-A611-134E016FFF15}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Practica_N°_2", "Practica_N°_2\Practica_N°_2.csproj", "{F37F8B0F-2085-44C1-B6FF-4B11903FEA6F}"
 EndProject

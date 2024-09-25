@@ -18,7 +18,7 @@ namespace Practica_N__4
             string nombre = string.Join(" ", partes);
             string calificacion = partes.Last();
 
-            return $"{nombre} ({})";
+            return $"{nombre} ({alumno.getLegajo} ) {calificacion}";
         }
     }
 }
