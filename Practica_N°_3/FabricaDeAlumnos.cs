@@ -20,16 +20,16 @@ namespace Practica_N__3
             Console.Write("Ingresar datos del nuevo alumno. \n");
 
             Console.Write("Ingresar nombre del alumno: ");
-            string nombre = Console.ReadLine();
+            string nombre = lector.StringPorTeclado();
 
             Console.Write("Ingresar DNI (SIN PUNTOS): ");
-            int dni = int.Parse(Console.ReadLine());
+            int dni = lector.NumeroPorTeclado();
 
             Console.Write("Ingresar legajo: ");
-            int legajo = int.Parse(Console.ReadLine());
+            int legajo = lector.NumeroPorTeclado();
 
             Console.Write("Ingresar promedio: ");
-            int promedio = int.Parse(Console.ReadLine());
+            int promedio = lector.NumeroPorTeclado();
 
             Console.Write("Elegir una estrategia de comparacion: \n" +
                 "1- Por legajo \n" +

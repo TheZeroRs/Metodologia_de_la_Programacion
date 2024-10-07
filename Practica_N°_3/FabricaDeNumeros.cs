@@ -18,7 +18,7 @@ namespace Practica_N__3
         public override Comparable CrearPorTeclado()
         {
             Console.Write("Ingrese un numero: ");
-            int n = int.Parse(Console.ReadLine());
+            int n = lector.NumeroPorTeclado();
             return new Numero(n);
         }
     }
