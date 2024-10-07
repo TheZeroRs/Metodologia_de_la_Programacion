@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Practica_N__4
 {
-    public class AlumnoAdaptado : Student 
+    public class AlumnoAdaptado : Student
     {
         public Alumno alumno;
 

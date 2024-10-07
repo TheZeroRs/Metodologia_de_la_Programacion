@@ -17,7 +17,7 @@ namespace Practica_N__4
 
         public virtual string mostrarCalificacion() 
         {
-            return this.mostrarCalificacion();
+            return this.alumno.mostrarCalificacion();
         }
     }
 }
