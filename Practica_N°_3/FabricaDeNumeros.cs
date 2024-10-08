@@ -10,8 +10,7 @@ namespace Practica_N__3
     {
         public override Comparable CrearAleatorio()
         {
-            GeneradorDeDatosAleaorios aleatorio = new GeneradorDeDatosAleaorios();
-            Numero numero = new Numero(aleatorio.NumeroAleatorio(999999999));
+            Numero numero = new Numero(generador.NumeroAleatorio(999999999));
             return numero;
         }
 

@@ -10,9 +10,8 @@ namespace Practica_N__3
     {
         public override Comparable CrearAleatorio()
         {
-            GeneradorDeDatosAleaorios aleatorios = new GeneradorDeDatosAleaorios();
             EstrategiaDeComparacion estrategia = new ComPorLegajo();
-            return new Alumno(aleatorios.StringAleatorio(5), aleatorios.NumeroAleatorio(1000000),aleatorios.NumeroAleatorio(1000),aleatorios.NumeroAleatorio(10), estrategia);
+            return new Alumno(generador.StringAleatorio(5), generador.NumeroAleatorio(1000000),generador.NumeroAleatorio(1000),generador.NumeroAleatorio(10), estrategia);
         }
 
         public override Comparable CrearPorTeclado() 
