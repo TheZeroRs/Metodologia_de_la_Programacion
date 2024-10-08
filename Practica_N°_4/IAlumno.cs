@@ -12,5 +12,6 @@ namespace Practica_N__4
         int getLegajo();
         int getPromedio();
         int getCalificacion();
+
     }
 }
