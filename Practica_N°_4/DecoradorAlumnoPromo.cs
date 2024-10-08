@@ -14,7 +14,7 @@ namespace Practica_N__4
 
         public override string mostrarCalificacion()
         {
-            return $"{alumno.mostrarCalificacion()} ({_promocion(alumno.getCalificacion())})";
+            return $"{_alumno.mostrarCalificacion()} ({_promocion(_alumno.getCalificacion())})";
         }
 
         private string _promocion(int promo) 

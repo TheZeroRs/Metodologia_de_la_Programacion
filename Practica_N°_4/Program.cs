@@ -10,21 +10,34 @@ namespace Practica_N__4
         {
             
             Teacher teacher = new Teacher();
-
+            int orden = 1;
             for (int i = 0; i < 10; i++) 
             {
                 Comparable alumno = FabricaDeComparables.CrearAleatorio(1);
                 AlumnoAdaptado adaptado = new AlumnoAdaptado((Alumno)alumno);
+                IAlumno alu = adaptado as IAlumno;
+                alu = new DecoradorAlumnoLegajo(alu);
+                alu = new DecoradorAlumnoNotaLetras(alu);
+                alu = new DecoradorAlumnoPromo(alu);
+                alu = new DecoradorAlumnoOrden(alu, orden);
+                alu = new DecoradorAlumnoAsteriscos(alu);
 
-                IAlumno legajo = new DecoradorAlumnoLegajo(adaptado);
                 teacher.goToClass(adaptado);
+                Console.WriteLine(alu.mostrarCalificacion());
+                orden++;
             }
 
             for (int i = 0; i < 10; i++)
             {
-                Comparable alumno = FabricaDeComparables.CrearAleatorio(3);
-                AlumnoAdaptado adaptado = new AlumnoAdaptado((AlumnoMuyEstudioso)alumno);
-                teacher.goToClass(adaptado);
+                //Comparable alumno = FabricaDeComparables.CrearAleatorio(3);
+                //AlumnoAdaptado adaptado = new AlumnoAdaptado((AlumnoMuyEstudioso)alumno);
+                //IAlumno legajo = new DecoradorAlumnoLegajo(adaptado);
+                //IAlumno notas = new DecoradorAlumnoNotaLetras(legajo);
+                //IAlumno promo = new DecoradorAlumnoPromo(notas);
+                //IAlumno ordenAlumno = new DecoradorAlumnoOrden(promo, orden);
+                //IAlumno asteriscos = new DecoradorAlumnoAsteriscos(ordenAlumno);
+                //teacher.goToClass((AlumnoAdaptado)asteriscos);
+                //orden++;
             }
             teacher.teachingAClass();
 

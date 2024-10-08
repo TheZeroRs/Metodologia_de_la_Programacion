@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Practica_N__4
 {
-    public class AlumnoAdaptado : Student
+    public class AlumnoAdaptado : Student, IAlumno
     {
         public Alumno alumno;
 
@@ -61,6 +61,56 @@ namespace Practica_N__4
                 return this.alumno.SosMayor(otroAdaptado.alumno);
             }
             return false;
+        }
+
+        public int getLegajo()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void setLegajo(int legajo)
+        {
+            throw new NotImplementedException();
+        }
+
+        public int getPromedio()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void setPromedio(int promedio)
+        {
+            throw new NotImplementedException();
+        }
+
+        public int getCalificacion()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void setCalificacion(int calificacion)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void setEstrategia(EstrategiaDeComparacion estrategia)
+        {
+            throw new NotImplementedException();
+        }
+
+        public EstrategiaDeComparacion getEstrategia()
+        {
+            throw new NotImplementedException();
+        }
+
+        public string mostrarCalificacion()
+        {
+            throw new NotImplementedException();
+        }
+
+        public int responderPregunta(int pregunta)
+        {
+            throw new NotImplementedException();
         }
     }
 }

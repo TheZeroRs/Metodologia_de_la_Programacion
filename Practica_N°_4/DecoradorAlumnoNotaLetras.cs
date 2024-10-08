@@ -13,7 +13,7 @@ namespace Practica_N__4
         }
         public override string mostrarCalificacion()
         {
-            return $"{alumno.mostrarCalificacion()} ({_convertirNumeroALetra(alumno.getCalificacion())}";
+            return $"{_alumno.mostrarCalificacion()} ({_convertirNumeroALetra(_alumno.getCalificacion())}";
         }
 
         private string _convertirNumeroALetra(int calificacion)

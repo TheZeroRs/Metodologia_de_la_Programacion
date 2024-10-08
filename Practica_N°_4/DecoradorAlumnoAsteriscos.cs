@@ -14,7 +14,7 @@ namespace Practica_N__4
 
         public override string mostrarCalificacion()
         {
-            string calificacion = alumno.mostrarCalificacion();
+            string calificacion = _alumno.mostrarCalificacion();
 
             int tamaño = calificacion.Length + 4;
             string asteriscos = new string('*', tamaño);

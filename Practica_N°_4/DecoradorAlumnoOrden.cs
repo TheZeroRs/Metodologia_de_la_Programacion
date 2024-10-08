@@ -17,7 +17,7 @@ namespace Practica_N__4
 
         public override string mostrarCalificacion()
         {
-            return $"{orden}) {alumno.mostrarCalificacion()}";
+            return $"{orden}) {_alumno.mostrarCalificacion()}";
         }
     }
 }

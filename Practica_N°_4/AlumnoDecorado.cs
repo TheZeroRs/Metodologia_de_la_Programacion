@@ -8,12 +8,34 @@ namespace Practica_N__4
 {
     public abstract class AlumnoDecorado : IAlumno
     {
-        protected IAlumno alumno;
+        protected IAlumno _alumno;
 
         public AlumnoDecorado(IAlumno alumno) 
         {
-            this.alumno = alumno;
+            this._alumno = alumno;
         }
+
+        public virtual string mostrarCalificacion()
+        {
+            return this._alumno.mostrarCalificacion();
+        }
+
+
+        public AlumnoAdaptado GetAlumnoAdaptado()
+        {
+            if (_alumno is AlumnoAdaptado)
+            {
+                return (AlumnoAdaptado)_alumno;
+            }
+            else if (_alumno is AlumnoDecorado decorado)
+            {
+                return decorado.GetAlumnoAdaptado();
+            }
+            throw new InvalidCastException("El objeto no es de tipo AlumnoAdaptado.");
+        }
+
+
+
 
         public int getCalificacion()
         {
@@ -33,11 +55,6 @@ namespace Practica_N__4
         public int getPromedio()
         {
             throw new NotImplementedException();
-        }
-
-        public virtual string mostrarCalificacion() 
-        {
-            return this.alumno.mostrarCalificacion();
         }
 
         public int responderPregunta(int pregunta)

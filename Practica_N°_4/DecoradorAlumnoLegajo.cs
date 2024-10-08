@@ -13,12 +13,12 @@ namespace Practica_N__4
         }
         public override string mostrarCalificacion()
         {
-            string calificacionCompleta = alumno.mostrarCalificacion();
+            string calificacionCompleta = _alumno.mostrarCalificacion();
             var partes = calificacionCompleta.Split(' ');
             string nombre = string.Join(" ", partes);
             string calificacion = partes.Last();
 
-            return $"{nombre} ({alumno.getLegajo} ) {calificacion}";
+            return $"{nombre} ({_alumno.getLegajo} ) {calificacion}";
         }
     }
 }
