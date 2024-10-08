@@ -8,10 +8,22 @@ namespace Practica_N__4
 {
     public interface IAlumno
     {
-        string mostrarCalificacion();
+        
+        //Legajo
         int getLegajo();
+        void setLegajo(int legajo);
+        //Promedio
         int getPromedio();
+        void setPromedio(int promedio);
+        //Calificacion
         int getCalificacion();
+        void setCalificacion(int calificacion);
+        //Estrategia
+        void setEstrategia(EstrategiaDeComparacion estrategia);
+        EstrategiaDeComparacion getEstrategia();
+        //Metodos 
+        string mostrarCalificacion();
+        int responderPregunta(int pregunta);
 
     }
 }

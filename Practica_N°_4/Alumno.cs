@@ -25,16 +25,29 @@ namespace Practica_N__4
         {
             return legajo;
         }  
+        public void setLegajo(int legajo)
+        {
+            this.legajo = legajo;
+        }
         
         public int getPromedio() 
         {
             return promedio;
         }
+        public void setPromedio(int promedio)
+        {
+            this.promedio = promedio;
+        }
 
+        public EstrategiaDeComparacion getEstrategia()
+        {
+            return this.estrategia;
+        }
         public void setEstrategia(EstrategiaDeComparacion estrategia)
         {
             this.estrategia = estrategia;
         }
+        
         public int getCalificacion() 
         {
             return calificacion;
