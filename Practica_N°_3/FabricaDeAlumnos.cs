@@ -10,9 +10,8 @@ namespace Practica_N__3
     {
         public override Comparable CrearAleatorio()
         {
-            GeneradorDeDatosAleaorios aleatorios = new GeneradorDeDatosAleaorios();
             EstrategiaDeComparacion estrategia = new ComPorLegajo();
-            return new Alumno(aleatorios.StringAleatorio(5), aleatorios.NumeroAleatorio(1000000),aleatorios.NumeroAleatorio(1000),aleatorios.NumeroAleatorio(10), estrategia);
+            return new Alumno(generador.StringAleatorio(5), generador.NumeroAleatorio(1000000),generador.NumeroAleatorio(1000),generador.NumeroAleatorio(10), estrategia);
         }
 
         public override Comparable CrearPorTeclado() 
@@ -20,16 +19,16 @@ namespace Practica_N__3
             Console.Write("Ingresar datos del nuevo alumno. \n");
 
             Console.Write("Ingresar nombre del alumno: ");
-            string nombre = Console.ReadLine();
+            string nombre = lector.StringPorTeclado();
 
             Console.Write("Ingresar DNI (SIN PUNTOS): ");
-            int dni = int.Parse(Console.ReadLine());
+            int dni = lector.NumeroPorTeclado();
 
             Console.Write("Ingresar legajo: ");
-            int legajo = int.Parse(Console.ReadLine());
+            int legajo = lector.NumeroPorTeclado();
 
             Console.Write("Ingresar promedio: ");
-            int promedio = int.Parse(Console.ReadLine());
+            int promedio = lector.NumeroPorTeclado();
 
             Console.Write("Elegir una estrategia de comparacion: \n" +
                 "1- Por legajo \n" +
