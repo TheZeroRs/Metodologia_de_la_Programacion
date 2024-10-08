@@ -10,8 +10,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Practica_N°_2", "Practica_
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Practica_N°_3", "Practica_N°_3\Practica_N°_3.csproj", "{9CEFD61F-E331-41B0-9B77-AA49379CFC99}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practica_N°_4", "Practica_N°_4\Practica_N°_4.csproj", "{E1237CE2-195E-49B6-BBAF-1B5A3C9AFF99}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,10 +28,6 @@ Global
 		{9CEFD61F-E331-41B0-9B77-AA49379CFC99}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9CEFD61F-E331-41B0-9B77-AA49379CFC99}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9CEFD61F-E331-41B0-9B77-AA49379CFC99}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E1237CE2-195E-49B6-BBAF-1B5A3C9AFF99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E1237CE2-195E-49B6-BBAF-1B5A3C9AFF99}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E1237CE2-195E-49B6-BBAF-1B5A3C9AFF99}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E1237CE2-195E-49B6-BBAF-1B5A3C9AFF99}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

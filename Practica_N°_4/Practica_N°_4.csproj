@@ -1,11 +1,9 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>net8.0</TargetFramework>
-    <RootNamespace>Practica_N__4</RootNamespace>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
-
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net5.0</TargetFramework>
+		<!-- Cambia esto según la versión que necesites -->
+		<RootNamespace>Practica_N__1</RootNamespace>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
 </Project>
