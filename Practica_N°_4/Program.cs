@@ -14,16 +14,17 @@ namespace Practica_N__4
             for (int i = 0; i < 10; i++) 
             {
                 Comparable alumno = FabricaDeComparables.CrearAleatorio(1);
-                AlumnoAdaptado adaptado = new AlumnoAdaptado((Alumno)alumno);
-                IAlumno alu = adaptado as IAlumno;
-                alu = new DecoradorAlumnoLegajo(alu);
-                alu = new DecoradorAlumnoNotaLetras(alu);
-                alu = new DecoradorAlumnoPromo(alu);
-                alu = new DecoradorAlumnoOrden(alu, orden);
-                alu = new DecoradorAlumnoAsteriscos(alu);
+                AlumnoAdaptado alumnoAdaptado = new AlumnoAdaptado((Alumno)alumno);
+                IAlumno adaptado = (IAlumno)alumnoAdaptado;
 
-                teacher.goToClass(adaptado);
-                Console.WriteLine(alu.mostrarCalificacion());
+                adaptado = new DecoradorAlumnoLegajo(adaptado);
+                adaptado = new DecoradorAlumnoNotaLetras(adaptado);
+                adaptado = new DecoradorAlumnoPromo(adaptado);
+                adaptado = new DecoradorAlumnoOrden(adaptado, orden);
+                adaptado = new DecoradorAlumnoAsteriscos(adaptado);
+
+                teacher.goToClass((AlumnoAdaptado)adaptado);
+                Console.WriteLine(adaptado.mostrarCalificacion());
                 orden++;
             }
 

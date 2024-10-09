@@ -17,6 +17,7 @@ namespace Practica_N__4
             var partes = calificacionCompleta.Split(' ');
             string nombre = string.Join(" ", partes);
             string calificacion = partes.Last();
+            string pan = $"{nombre} ({_alumno.getLegajo} ) {calificacion}";
 
             return $"{nombre} ({_alumno.getLegajo} ) {calificacion}";
         }

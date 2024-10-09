@@ -11,12 +11,12 @@ namespace Practica_N__4
     {
         public Alumno alumno;
 
-        public AlumnoAdaptado(Alumno alumno) 
+        public AlumnoAdaptado(Alumno alumno)
         {
             this.alumno = alumno;
         }
 
-        public string getName() 
+        public string getName()
         {
             return this.alumno.GetNombre();
         }
@@ -28,7 +28,7 @@ namespace Practica_N__4
 
         public void setScore(int score)
         {
-           this.alumno.setCalificacion(score);
+            this.alumno.setCalificacion(score);
         }
 
         public string showResult()
@@ -85,7 +85,7 @@ namespace Practica_N__4
 
         public int getCalificacion()
         {
-            throw new NotImplementedException();
+            return alumno.getCalificacion();
         }
 
         public void setCalificacion(int calificacion)
@@ -105,7 +105,7 @@ namespace Practica_N__4
 
         public string mostrarCalificacion()
         {
-            throw new NotImplementedException();
+            return showResult();
         }
 
         public int responderPregunta(int pregunta)

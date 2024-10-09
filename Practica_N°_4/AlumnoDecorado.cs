@@ -20,26 +20,9 @@ namespace Practica_N__4
             return this._alumno.mostrarCalificacion();
         }
 
-
-        public AlumnoAdaptado GetAlumnoAdaptado()
-        {
-            if (_alumno is AlumnoAdaptado)
-            {
-                return (AlumnoAdaptado)_alumno;
-            }
-            else if (_alumno is AlumnoDecorado decorado)
-            {
-                return decorado.GetAlumnoAdaptado();
-            }
-            throw new InvalidCastException("El objeto no es de tipo AlumnoAdaptado.");
-        }
-
-
-
-
         public int getCalificacion()
         {
-            throw new NotImplementedException();
+            return this._alumno.getCalificacion();
         }
 
         public EstrategiaDeComparacion getEstrategia()
