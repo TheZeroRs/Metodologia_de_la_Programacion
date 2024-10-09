@@ -8,7 +8,14 @@ namespace Practica_N__4
 {
     public abstract class FabricaDeComparables
     {
-        
+        protected GeneradorDeDatosAleaorios generador;
+        protected LectorDeDatos lector;
+
+        public FabricaDeComparables()
+        {
+            this.generador = new GeneradorDeDatosAleaorios();
+            this.lector = new LectorDeDatos();
+        }
         public static Comparable CrearAleatorio(int opc) 
         {
             FabricaDeComparables fabrica = null;

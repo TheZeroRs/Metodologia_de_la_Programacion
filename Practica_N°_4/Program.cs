@@ -8,42 +8,41 @@ namespace Practica_N__4
 
         static void Main(string[] args)
         {
-            
-            Teacher teacher = new Teacher();
-            int orden = 1;
-            for (int i = 0; i < 10; i++) 
-            {
-                Comparable alumno = FabricaDeComparables.CrearAleatorio(1);
-                AlumnoAdaptado alumnoAdaptado = new AlumnoAdaptado((Alumno)alumno);
-                IAlumno adaptado = (IAlumno)alumnoAdaptado;
+                Student student;
+                Teacher teacher = new Teacher();
+                IAlumno alumno, muyEstudioso, deco1, deco2, deco3, deco4, deco5;
+            int cont = 0;
+                for (int i = 0; i < 10; i++)
+                {
+                    alumno = (IAlumno)FabricaDeComparables.CrearAleatorio(1);
+                    deco1 = new DecoradorAlumnoLegajo(alumno);
+                    deco2 = new DecoradorAlumnoNotaLetras(deco1);
+                    deco3 = new DecoradorAlumnoPromo(deco2);
+                    deco4 = new DecoradorAlumnoOrden(deco3, cont);
+                    deco5 = new DecoradorAlumnoAsteriscos(deco4);
 
-                adaptado = new DecoradorAlumnoLegajo(adaptado);
-                adaptado = new DecoradorAlumnoNotaLetras(adaptado);
-                adaptado = new DecoradorAlumnoPromo(adaptado);
-                adaptado = new DecoradorAlumnoOrden(adaptado, orden);
-                adaptado = new DecoradorAlumnoAsteriscos(adaptado);
+                    student = new AlumnoAdaptado(deco5);
 
-                //teacher.goToClass((AlumnoAdaptado)adaptado);
-                Console.WriteLine(adaptado.mostrarCalificacion());
-                orden++;
+                    teacher.goToClass(student);
+                cont++;
+                }
+
+                for (int i = 0; i < 10; i++)
+                {
+                    muyEstudioso = (IAlumno)FabricaDeComparables.CrearAleatorio(3);
+
+
+                    deco1 = new DecoradorAlumnoLegajo(muyEstudioso);
+                    deco2 = new DecoradorAlumnoNotaLetras(deco1);
+                    deco3 = new DecoradorAlumnoPromo(deco2);
+                    deco4 = new DecoradorAlumnoOrden(deco3, cont);
+                    deco5 = new DecoradorAlumnoAsteriscos(deco4);
+
+                    student = new AlumnoAdaptado(deco5);
+                    teacher.goToClass(student);
+                cont++;
             }
 
-            for (int i = 0; i < 10; i++)
-            {
-                Comparable alumno = FabricaDeComparables.CrearAleatorio(3);
-                AlumnoAdaptado alumnoAdaptado = new AlumnoAdaptado((AlumnoMuyEstudioso)alumno);
-                IAlumno adaptado = (IAlumno)alumnoAdaptado;
-
-                adaptado = new DecoradorAlumnoLegajo(adaptado);
-                adaptado = new DecoradorAlumnoNotaLetras(adaptado);
-                adaptado = new DecoradorAlumnoPromo(adaptado);
-                adaptado = new DecoradorAlumnoOrden(adaptado, orden);
-                adaptado = new DecoradorAlumnoAsteriscos(adaptado);
-
-                //teacher.goToClass((AlumnoAdaptado)asteriscos);
-                Console.WriteLine(adaptado.mostrarCalificacion());
-                orden++;
-            }
             teacher.teachingAClass();
         }
 

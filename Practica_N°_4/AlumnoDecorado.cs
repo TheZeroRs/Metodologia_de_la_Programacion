@@ -32,7 +32,7 @@ namespace Practica_N__4
 
         public int getLegajo()
         {
-            throw new NotImplementedException();
+            return _alumno.getLegajo();
         }
 
         public int getPromedio()
@@ -42,12 +42,12 @@ namespace Practica_N__4
 
         public int responderPregunta(int pregunta)
         {
-            throw new NotImplementedException();
+            return _alumno.responderPregunta(pregunta);
         }
 
         public void setCalificacion(int calificacion)
         {
-            throw new NotImplementedException();
+            _alumno.setCalificacion(calificacion);
         }
 
         public void setEstrategia(EstrategiaDeComparacion estrategia)
@@ -63,6 +63,26 @@ namespace Practica_N__4
         public void setPromedio(int promedio)
         {
             throw new NotImplementedException();
+        }
+
+        public bool SosIgual(Comparable com)
+        {
+            return _alumno.SosIgual(com);
+        }
+
+        public bool SosMenor(Comparable com)
+        {
+            return _alumno.SosMenor(com);
+        }
+
+        public bool SosMayor(Comparable com)
+        {
+            return _alumno.SosMayor(com);
+        }
+
+        public string GetNombre()
+        {
+            return _alumno.GetNombre();
         }
     }
 }
