@@ -23,32 +23,28 @@ namespace Practica_N__4
                 adaptado = new DecoradorAlumnoOrden(adaptado, orden);
                 adaptado = new DecoradorAlumnoAsteriscos(adaptado);
 
-                teacher.goToClass((AlumnoAdaptado)adaptado);
+                //teacher.goToClass((AlumnoAdaptado)adaptado);
                 Console.WriteLine(adaptado.mostrarCalificacion());
                 orden++;
             }
 
             for (int i = 0; i < 10; i++)
             {
-                //Comparable alumno = FabricaDeComparables.CrearAleatorio(3);
-                //AlumnoAdaptado adaptado = new AlumnoAdaptado((AlumnoMuyEstudioso)alumno);
-                //IAlumno legajo = new DecoradorAlumnoLegajo(adaptado);
-                //IAlumno notas = new DecoradorAlumnoNotaLetras(legajo);
-                //IAlumno promo = new DecoradorAlumnoPromo(notas);
-                //IAlumno ordenAlumno = new DecoradorAlumnoOrden(promo, orden);
-                //IAlumno asteriscos = new DecoradorAlumnoAsteriscos(ordenAlumno);
+                Comparable alumno = FabricaDeComparables.CrearAleatorio(3);
+                AlumnoAdaptado alumnoAdaptado = new AlumnoAdaptado((AlumnoMuyEstudioso)alumno);
+                IAlumno adaptado = (IAlumno)alumnoAdaptado;
+
+                adaptado = new DecoradorAlumnoLegajo(adaptado);
+                adaptado = new DecoradorAlumnoNotaLetras(adaptado);
+                adaptado = new DecoradorAlumnoPromo(adaptado);
+                adaptado = new DecoradorAlumnoOrden(adaptado, orden);
+                adaptado = new DecoradorAlumnoAsteriscos(adaptado);
+
                 //teacher.goToClass((AlumnoAdaptado)asteriscos);
-                //orden++;
+                Console.WriteLine(adaptado.mostrarCalificacion());
+                orden++;
             }
             teacher.teachingAClass();
-
-            Comparable a = FabricaDeComparables.CrearAleatorio(1);
-
-            Alumno alum = a as Alumno;
-
-            Console.WriteLine (alum.mostrarCalificacion());
-
-            
         }
 
         public static void Llenar(Coleccionable col, int opcion)

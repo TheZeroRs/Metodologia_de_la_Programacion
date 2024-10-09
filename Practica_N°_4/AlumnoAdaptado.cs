@@ -65,7 +65,7 @@ namespace Practica_N__4
 
         public int getLegajo()
         {
-            throw new NotImplementedException();
+            return this.alumno.getLegajo();
         }
 
         public void setLegajo(int legajo)
