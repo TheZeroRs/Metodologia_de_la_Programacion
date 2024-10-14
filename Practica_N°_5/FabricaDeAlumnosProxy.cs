@@ -6,8 +6,16 @@ using System.Threading.Tasks;
 
 namespace Practica_N__5
 {
-    public class FabricaDeAlumnosProxy
+    public class FabricaDeAlumnosProxy : FabricaDeComparables
     {
+        public override Comparable CrearAleatorio()
+        {
+            
+        }
 
+        public override Comparable CrearPorTeclado()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
