@@ -23,8 +23,7 @@ namespace Practica_N__5
                 adaptado = new DecoradorAlumnoOrden(adaptado, orden);
                 adaptado = new DecoradorAlumnoAsteriscos(adaptado);
 
-                //teacher.goToClass((AlumnoAdaptado)adaptado);
-                Console.WriteLine(adaptado.mostrarCalificacion());
+                teacher.goToClass(adaptado);
                 orden++;
             }
 
@@ -40,8 +39,7 @@ namespace Practica_N__5
                 adaptado = new DecoradorAlumnoOrden(adaptado, orden);
                 adaptado = new DecoradorAlumnoAsteriscos(adaptado);
 
-                //teacher.goToClass((AlumnoAdaptado)asteriscos);
-                Console.WriteLine(adaptado.mostrarCalificacion());
+                teacher.goToClass((AlumnoAdaptado)adaptado);
                 orden++;
             }
             teacher.teachingAClass();

@@ -11,7 +11,7 @@ namespace Practica_N__4
                 Student student;
                 Teacher teacher = new Teacher();
                 IAlumno alumno, muyEstudioso, deco1, deco2, deco3, deco4, deco5;
-            int cont = 0;
+                int cont = 0;
                 for (int i = 0; i < 10; i++)
                 {
                     alumno = (IAlumno)FabricaDeComparables.CrearAleatorio(1);
@@ -21,7 +21,7 @@ namespace Practica_N__4
                     deco4 = new DecoradorAlumnoOrden(deco3, cont);
                     deco5 = new DecoradorAlumnoAsteriscos(deco4);
 
-                    student = new AlumnoAdaptado(deco5);
+                    student = new AlumnoAdaptado((Alumno)deco5);
 
                     teacher.goToClass(student);
                 cont++;
@@ -38,7 +38,7 @@ namespace Practica_N__4
                     deco4 = new DecoradorAlumnoOrden(deco3, cont);
                     deco5 = new DecoradorAlumnoAsteriscos(deco4);
 
-                    student = new AlumnoAdaptado(deco5);
+                    student = new AlumnoAdaptado((Alumno)deco5);
                     teacher.goToClass(student);
                 cont++;
             }
