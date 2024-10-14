@@ -21,7 +21,7 @@ namespace Practica_N__4
                     deco4 = new DecoradorAlumnoOrden(deco3, cont);
                     deco5 = new DecoradorAlumnoAsteriscos(deco4);
 
-                    student = new AlumnoAdaptado((Alumno)deco5);
+                    student = new AlumnoAdaptado(deco5);
 
                     teacher.goToClass(student);
                 cont++;
@@ -38,7 +38,7 @@ namespace Practica_N__4
                     deco4 = new DecoradorAlumnoOrden(deco3, cont);
                     deco5 = new DecoradorAlumnoAsteriscos(deco4);
 
-                    student = new AlumnoAdaptado((Alumno)deco5);
+                    student = new AlumnoAdaptado(deco5);
                     teacher.goToClass(student);
                 cont++;
             }

@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Practica_N__5
 {
-    public class AlumnoAdaptado : Student, IAlumno
+    public class AlumnoAdaptado : Student
     {
-        public Alumno alumno;
+        private IAlumno alumno;
 
-        public AlumnoAdaptado(Alumno alumno)
+        public AlumnoAdaptado(IAlumno alumno)
         {
             this.alumno = alumno;
         }
@@ -38,27 +38,27 @@ namespace Practica_N__5
 
         public bool equals(Student student)
         {
-            if (student is AlumnoAdaptado otroAdaptado)
+            if ( student is AlumnoAdaptado adapter) 
             {
-                return this.alumno.SosIgual(otroAdaptado.alumno);
+                return alumno.getLegajo() == adapter.getLegajo();
             }
             return false;
         }
 
         public bool lessThan(Student student)
         {
-            if (student is AlumnoAdaptado otroAdaptado)
+            if (student is AlumnoAdaptado adapter)
             {
-                return this.alumno.SosMenor(otroAdaptado.alumno);
+                return alumno.getLegajo() < adapter.getLegajo();
             }
             return false;
         }
 
         public bool greaterThan(Student student)
         {
-            if (student is AlumnoAdaptado otroAdaptado)
+            if (student is AlumnoAdaptado adapter)
             {
-                return this.alumno.SosMayor(otroAdaptado.alumno);
+                return alumno.getLegajo() > adapter.getLegajo();
             }
             return false;
         }

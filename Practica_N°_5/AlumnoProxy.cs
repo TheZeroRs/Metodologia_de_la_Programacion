@@ -76,5 +76,19 @@ namespace Practica_N__5
             throw new NotImplementedException();
         }
 
+        public bool SosIgual(Comparable com)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool SosMenor(Comparable com)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool SosMayor(Comparable com)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

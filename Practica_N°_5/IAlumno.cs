@@ -8,7 +8,10 @@ namespace Practica_N__5
 {
     public interface IAlumno
     {
-        
+        bool SosIgual(Comparable com);
+        bool SosMenor(Comparable com);
+        bool SosMayor(Comparable com);
+        string GetNombre();
         //Legajo
         int getLegajo();
         void setLegajo(int legajo);
