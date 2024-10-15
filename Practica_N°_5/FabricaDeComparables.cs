@@ -8,6 +8,7 @@ namespace Practica_N__5
 {
     public abstract class FabricaDeComparables
     {
+
         protected GeneradorDeDatosAleaorios generador;
         protected LectorDeDatos lector;
 
@@ -16,6 +17,7 @@ namespace Practica_N__5
             this.generador = new GeneradorDeDatosAleaorios();
             this.lector = new LectorDeDatos();
         }
+
         public static Comparable CrearAleatorio(int opc) 
         {
             FabricaDeComparables fabrica = null;
@@ -30,8 +32,6 @@ namespace Practica_N__5
                 case 3:
                     fabrica = new FabricaDeAlumnosEstudiosos();
                     break;
-                case 4:
-                    fabrica = new FabricaDeAlumnosProxy();
             }
             return fabrica.CrearAleatorio();
         }

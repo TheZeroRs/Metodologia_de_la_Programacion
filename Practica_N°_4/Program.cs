@@ -11,7 +11,7 @@ namespace Practica_N__4
                 Student student;
                 Teacher teacher = new Teacher();
                 IAlumno alumno, muyEstudioso, deco1, deco2, deco3, deco4, deco5;
-                int cont = 0;
+                int cont = 1;
                 for (int i = 0; i < 10; i++)
                 {
                     alumno = (IAlumno)FabricaDeComparables.CrearAleatorio(1);
@@ -30,8 +30,6 @@ namespace Practica_N__4
                 for (int i = 0; i < 10; i++)
                 {
                     muyEstudioso = (IAlumno)FabricaDeComparables.CrearAleatorio(3);
-
-
                     deco1 = new DecoradorAlumnoLegajo(muyEstudioso);
                     deco2 = new DecoradorAlumnoNotaLetras(deco1);
                     deco3 = new DecoradorAlumnoPromo(deco2);

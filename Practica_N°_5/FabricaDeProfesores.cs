@@ -20,13 +20,13 @@ namespace Practica_N__5
             Console.WriteLine("Ingresar datos del nuevo profesor. \n");
 
             Console.WriteLine("Ingresar nombre del alumno: ");
-            string nombre = Console.ReadLine();
+            string nombre = lector.StringPorTeclado();
 
             Console.WriteLine("Ingresar DNI (SIN PUNTOS): ");
-            int dni = int.Parse(Console.ReadLine());
+            int dni = lector.NumeroPorTeclado();
 
             Console.WriteLine("Ingresar antiguedad: ");
-            int antiguedad = int.Parse(Console.ReadLine());
+            int antiguedad = lector.NumeroPorTeclado();
 
             return new Profesor(antiguedad, nombre, dni);
         }

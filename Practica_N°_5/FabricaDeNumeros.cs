@@ -10,15 +10,14 @@ namespace Practica_N__5
     {
         public override Comparable CrearAleatorio()
         {
-            GeneradorDeDatosAleaorios aleatorio = new GeneradorDeDatosAleaorios();
-            Numero numero = new Numero(aleatorio.NumeroAleatorio(999999999));
+            Numero numero = new Numero(generador.NumeroAleatorio(999999999));
             return numero;
         }
 
         public override Comparable CrearPorTeclado()
         {
             Console.Write("Ingrese un numero: ");
-            int n = int.Parse(Console.ReadLine());
+            int n = lector.NumeroPorTeclado();
             return new Numero(n);
         }
     }

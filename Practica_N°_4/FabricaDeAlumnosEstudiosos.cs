@@ -10,9 +10,8 @@ namespace Practica_N__4
     {
         public override Comparable CrearAleatorio()
         {
-            GeneradorDeDatosAleaorios aleatorios = new GeneradorDeDatosAleaorios();
             EstrategiaDeComparacion estrategia = new ComPorLegajo();
-            return new AlumnoMuyEstudioso(aleatorios.StringAleatorio(5), aleatorios.NumeroAleatorio(1000000), aleatorios.NumeroAleatorio(1000), aleatorios.NumeroAleatorio(10), estrategia, aleatorios.NumeroAleatorio(10));
+            return new AlumnoMuyEstudioso(generador.StringAleatorio(5), generador.NumeroAleatorio(1000000), generador.NumeroAleatorio(1000), generador.NumeroAleatorio(10), estrategia, 10);
         }
 
         public override Comparable CrearPorTeclado()
@@ -20,22 +19,25 @@ namespace Practica_N__4
             Console.Write("Ingresar datos del nuevo alumno. \n");
 
             Console.Write("Ingresar nombre del alumno: ");
-            string nombre = Console.ReadLine();
+            string nombre = lector.StringPorTeclado();
 
             Console.Write("Ingresar DNI (SIN PUNTOS): ");
-            int dni = int.Parse(Console.ReadLine());
+            int dni = lector.NumeroPorTeclado();
 
             Console.Write("Ingresar legajo: ");
-            int legajo = int.Parse(Console.ReadLine());
+            int legajo = lector.NumeroPorTeclado();
 
             Console.Write("Ingresar promedio: ");
-            int promedio = int.Parse(Console.ReadLine());
+            int promedio = lector.NumeroPorTeclado();
+
+            Console.Write("Ingrese calificacion: ");
+            int calificacion = lector.NumeroPorTeclado();
 
             Console.Write("Elegir una estrategia de comparacion: \n" +
                 "1- Por legajo \n" +
                 "2- Por dni \n" +
                 "3- Por nombre \n" +
-                "4- Por promedio \n");
+                "4- Por promedio");
             int op = int.Parse(Console.ReadLine());
             EstrategiaDeComparacion estrategia = new ComPorLegajo();
             switch (op)
@@ -53,8 +55,6 @@ namespace Practica_N__4
                     estrategia = new ComPorPromedio();
                     break;
             }
-            Console.Write("Ingresar calificacion: ");
-            int calificacion = int.Parse(Console.ReadLine());
 
             return new AlumnoMuyEstudioso(nombre, dni, legajo, promedio, estrategia, calificacion);
         }

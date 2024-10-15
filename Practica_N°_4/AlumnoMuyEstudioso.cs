@@ -8,14 +8,14 @@ namespace Practica_N__4
 {
     public class AlumnoMuyEstudioso : Alumno, IAlumno
     {
-        public AlumnoMuyEstudioso(string nombre, int edad, int grado, int calificacion, EstrategiaDeComparacion estrategia, int nivel)
-        : base(nombre, edad, grado, calificacion, estrategia, nivel)
+        public AlumnoMuyEstudioso(string nombre, int dni, int legajo,int promedio, EstrategiaDeComparacion estrategia, int calificacion)
+        : base(nombre, dni, legajo, promedio, estrategia, calificacion)
         {
 
         }
         public override int responderPregunta(int pregunta) 
         {
-            return 3;
+            return pregunta % 3;
         }
     }
 }
