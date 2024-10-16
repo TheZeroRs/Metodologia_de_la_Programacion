@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace Practica_N__5
 {
-    public class Cola : Coleccionable, Iterable
+    public class Cola : Coleccionable, Iterable, IOrdenable
     {
+        IOrdenEnAula1 ordenInicio = null, ordenFin = null;
+        IOrdenEnAula2 ordenAlumno = null;
+
         List<Comparable> elementos;
         public Cola()
         {
@@ -17,6 +20,27 @@ namespace Practica_N__5
         public void AñadirCola(Comparable com) 
         {
             this.elementos.Add(com);
+
+            if (elementos.Count == 1)
+            {
+                if (ordenInicio != null)
+                {
+                    ordenInicio.Ejecutar();
+                }
+            }
+
+            if (ordenAlumno != null)
+            {
+                ordenAlumno.Ejecutar(com);
+            }
+
+            if (elementos.Count == 40)
+            {
+                if (ordenFin != null)
+                {
+                    ordenFin.Ejecutar();
+                }
+            }
         }
 
         public Comparable QuitarCola()
@@ -84,6 +108,21 @@ namespace Practica_N__5
         public List<Comparable> GetElementos()
         {
             return new List<Comparable>(elementos);
+        }
+
+        public void setOrdenInicio(IOrdenEnAula1 orden)
+        {
+            ordenInicio = orden;
+        }
+
+        public void setOrdenLlegaAlumno(IOrdenEnAula2 orden)
+        {
+            ordenAlumno = orden;
+        }
+
+        public void setOrdenAulaLlena(IOrdenEnAula1 orden)
+        {
+            ordenFin = orden;
         }
     }
 }

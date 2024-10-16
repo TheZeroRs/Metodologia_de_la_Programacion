@@ -26,6 +26,7 @@ namespace Practica_N__5
         {
             if(alumnoReal == null) 
             {
+                Console.WriteLine("Se crea un alumno real");
                 alumnoReal = (IAlumno)FabricaDeComparables.CrearAleatorio(queCrear);
             }
             return alumnoReal.responderPregunta(pregunta);
@@ -33,6 +34,7 @@ namespace Practica_N__5
 
         public string mostrarCalificacion() 
         {
+
             return alumnoReal.mostrarCalificacion();
         }
 

@@ -8,42 +8,13 @@ namespace Practica_N__5
 
         static void Main(string[] args)
         {
-            Student student;
-            Teacher teacher = new Teacher();
-            IAlumno alumno, muyEstudioso, deco1, deco2, deco3, deco4, deco5;
-            int cont = 0;
-            for (int i = 0; i < 10; i++)
-            {
-                alumno = (IAlumno)FabricaDeComparables.CrearAleatorio(1);
-                deco1 = new DecoradorAlumnoLegajo(alumno);
-                deco2 = new DecoradorAlumnoNotaLetras(deco1);
-                deco3 = new DecoradorAlumnoPromo(deco2);
-                deco4 = new DecoradorAlumnoOrden(deco3, cont);
-                deco5 = new DecoradorAlumnoAsteriscos(deco4);
-
-                student = new AlumnoAdaptado(deco5);
-
-                teacher.goToClass(student);
-                cont++;
-            }
-
-            for (int i = 0; i < 10; i++)
-            {
-                muyEstudioso = (IAlumno)FabricaDeComparables.CrearAleatorio(3);
-
-
-                deco1 = new DecoradorAlumnoLegajo(muyEstudioso);
-                deco2 = new DecoradorAlumnoNotaLetras(deco1);
-                deco3 = new DecoradorAlumnoPromo(deco2);
-                deco4 = new DecoradorAlumnoOrden(deco3, cont);
-                deco5 = new DecoradorAlumnoAsteriscos(deco4);
-
-                student = new AlumnoAdaptado(deco5);
-                teacher.goToClass(student);
-                cont++;
-            }
-
-            teacher.teachingAClass();
+            Pila pila = new Pila();
+            Aula aula = new Aula();
+            pila.setOrdenInicio(new OrdenInicio(aula));
+            pila.setOrdenLlegaAlumno(new OrdenLlegaAlumno(aula));
+            pila.setOrdenAulaLlena(new OrdenAulaLlena(aula));
+            Llenar(pila, 1);
+            Llenar(pila, 3);
         }
 
         public static void Llenar(Coleccionable col, int opcion)
