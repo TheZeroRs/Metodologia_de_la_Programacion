@@ -32,6 +32,12 @@ namespace Practica_N__5
                 case 3:
                     fabrica = new FabricaDeAlumnosEstudiosos();
                     break;
+                case 4:
+                    fabrica = new FabricaDeAlumnosProxys();
+                    break;
+                case 5:
+                    fabrica = new FabricaDeAlumnoDecorado();
+                    break;
             }
             return fabrica.CrearAleatorio();
         }

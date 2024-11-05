@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Practica_N__5
 {
-    public class AlumnoProxy: IAlumno
+    public class AlumnoProxy: IAlumno, Comparable
     {
         private IAlumno alumnoReal = null;
         private string nombre;
