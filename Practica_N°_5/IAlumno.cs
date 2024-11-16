@@ -12,6 +12,7 @@ namespace Practica_N__5
         bool SosMenor(Comparable com);
         bool SosMayor(Comparable com);
         string GetNombre();
+        void SetNombre(string nombre);
         //Legajo
         int getLegajo();
         void setLegajo(int legajo);

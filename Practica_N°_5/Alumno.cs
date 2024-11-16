@@ -120,5 +120,10 @@ namespace Practica_N__5
         {
             return  this.GetNombre() + "       " + this.getCalificacion();
         }
+
+        public void SetNombre(string nombre)
+        {
+            this.SetNombre(nombre);
+        }
     }
 }

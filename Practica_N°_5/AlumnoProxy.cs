@@ -17,6 +17,7 @@ namespace Practica_N__5
             this.nombre = nombre;
             this.queCrear = queCrear;
         }
+
         public string GetNombre() 
         {
             return this.nombre; 
@@ -28,13 +29,13 @@ namespace Practica_N__5
             {
                 Console.WriteLine("Se crea un alumno real");
                 alumnoReal = (IAlumno)FabricaDeComparables.CrearAleatorio(queCrear);
+                alumnoReal.SetNombre(this.nombre);
             }
             return alumnoReal.responderPregunta(pregunta);
         }
 
         public string mostrarCalificacion() 
         {
-
             return alumnoReal.mostrarCalificacion();
         }
 
@@ -89,6 +90,11 @@ namespace Practica_N__5
         }
 
         public bool SosMayor(Comparable com)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SetNombre(string nombre)
         {
             throw new NotImplementedException();
         }

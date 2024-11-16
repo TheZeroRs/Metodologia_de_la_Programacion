@@ -16,9 +16,9 @@ namespace Practica_N__5
             teacher = new Teacher();
         }
 
-        public void NuevoAlumno(Alumno alumno) 
+        public void NuevoAlumno(IAlumno alumno) 
         {
-            AlumnoAdaptado a = new AlumnoAdaptado(alumno);
+            AlumnoAdaptado a = new AlumnoAdaptado((Alumno)alumno);
             teacher.goToClass(a);
         }
 

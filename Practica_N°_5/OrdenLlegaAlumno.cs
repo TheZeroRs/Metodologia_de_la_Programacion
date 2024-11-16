@@ -15,7 +15,7 @@ namespace Practica_N__5
         }
         public void Ejecutar(Comparable com)
         {
-            aula.NuevoAlumno((Alumno)com);
+            aula.NuevoAlumno((IAlumno)com);
         }
     }
 }
