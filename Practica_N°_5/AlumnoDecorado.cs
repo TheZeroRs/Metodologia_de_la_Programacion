@@ -84,5 +84,10 @@ namespace Practica_N__5
         {
             return _alumno.GetNombre();
         }
+
+        public void SetNombre(string nombre)
+        {
+            _alumno.SetNombre(nombre);
+        }
     }
 }
