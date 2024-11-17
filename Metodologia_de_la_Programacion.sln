@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practica_N°_6", "Practica_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practica_N°_6_Juego_De_Cartas", "Practica_N°_6_Juego_De_Cartas\Practica_N°_6_Juego_De_Cartas.csproj", "{140471EC-3FA9-4CEA-9D05-B0722187E478}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practica_N°_7", "Practica_N°_7\Practica_N°_7.csproj", "{4A7A3060-4001-4F97-94AF-C1FC653B63A0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{140471EC-3FA9-4CEA-9D05-B0722187E478}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{140471EC-3FA9-4CEA-9D05-B0722187E478}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{140471EC-3FA9-4CEA-9D05-B0722187E478}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A7A3060-4001-4F97-94AF-C1FC653B63A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A7A3060-4001-4F97-94AF-C1FC653B63A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A7A3060-4001-4F97-94AF-C1FC653B63A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A7A3060-4001-4F97-94AF-C1FC653B63A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
