@@ -34,7 +34,7 @@ namespace Practica_N__7
                 ordenAlumno.Ejecutar(com);
             }
 
-            if(elementos.Count == 41) 
+            if(elementos.Count == 6) 
             {
                 if (ordenFin != null) 
                 {

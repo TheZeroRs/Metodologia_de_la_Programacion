@@ -58,5 +58,11 @@ namespace Practica_N__7
 
             return new AlumnoMuyEstudioso(nombre, dni, legajo, promedio, estrategia, calificacion);
         }
+
+        public override Comparable CrearTomandoDatos()
+        {
+            EstrategiaDeComparacion estrategia = new ComPorLegajo();
+            return new Alumno(manejador.stringDesdeArchivo(5), (int)manejador.numeroDesdeArchivo(1000000), (int)manejador.numeroDesdeArchivo(1000), (int)manejador.numeroDesdeArchivo(10), estrategia, 10);
+        }
     }
 }

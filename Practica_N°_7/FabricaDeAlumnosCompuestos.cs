@@ -17,5 +17,10 @@ namespace Practica_N__7
         {
             return new AlumnoCompuesto();
         }
+
+        public override Comparable CrearTomandoDatos()
+        {
+            return new AlumnoCompuesto();
+        }
     }
 }

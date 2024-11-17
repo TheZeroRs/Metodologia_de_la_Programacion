@@ -9,34 +9,41 @@ namespace Practica_N__7
 
         static void Main(string[] args)
         {
-            //Pila pila = new Pila();
-            //Aula aula = new Aula();
-            //pila.setOrdenInicio(new OrdenInicio(aula));
-            //pila.setOrdenLlegaAlumno(new OrdenLlegaAlumno(aula));
-            //pila.setOrdenAulaLlena(new OrdenAulaLlena(aula));
-            //Llenar(pila, 1);
-            //Llenar(pila, 3);
-            //Llenar(pila, 6);
+            Pila pila = new Pila();
+            Aula aula = new Aula();
+            pila.setOrdenInicio(new OrdenInicio(aula));
+            pila.setOrdenLlegaAlumno(new OrdenLlegaAlumno(aula));
+            pila.setOrdenAulaLlena(new OrdenAulaLlena(aula));
+            LlenarP7(pila);
 
-            Manejador manejador = CrearCadenaDeResponsabilidades();
-
-
-            Comparable com = FabricaDeComparables.CrearAleatorio(1);
-
-            Console.ReadKey();
+            
+            Console.WriteLine(pila);
         }
 
-
-        public static Manejador CrearCadenaDeResponsabilidades() 
+        public static void LlenarP7(Coleccionable col)
         {
-            Manejador manejador = new GeneradorDeDatosAleaorios(null);
-            manejador = new LectorDeDatos(manejador);
-            manejador = new LectorDeArchivos(manejador);
-            return manejador;
+            for (int i = 0; i < 5; i++)
+            {
+                Comparable aux = FabricaDeComparables.CrearAleatorio(1);
+                col.Agregar(aux);
+            }
+
+            for (int i = 0; i < 2; i++)
+            {
+                Comparable aux = FabricaDeComparables.CrearPorTeclado(3);
+                col.Agregar(aux);
+            }
+
+            AlumnoCompuesto compuesto = (AlumnoCompuesto)FabricaDeComparables.CrearAleatorio(6);
+            for (int i = 0; i < 5; i++)
+            {
+                Comparable proxy = FabricaDeComparables.CrearAleatorio(4);
+                compuesto.AgregarAlumno((IAlumno)proxy);
+            }
+            col.Agregar(compuesto);
+
 
         }
-
-
 
         public static void Llenar(Coleccionable col, int opcion)
         {
@@ -45,7 +52,6 @@ namespace Practica_N__7
                 AlumnoCompuesto compuesto = (AlumnoCompuesto)FabricaDeComparables.CrearAleatorio(6);
                 for (int i = 0; i < 5; i++)
                 {
-                    Comparable aux;
                     Comparable proxy = FabricaDeComparables.CrearAleatorio(4);
                     compuesto.AgregarAlumno((IAlumno)proxy);
                 }

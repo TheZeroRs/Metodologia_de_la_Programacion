@@ -18,5 +18,10 @@ namespace Practica_N__7
         {
             throw new NotImplementedException();
         }
+
+        public override Comparable CrearTomandoDatos()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

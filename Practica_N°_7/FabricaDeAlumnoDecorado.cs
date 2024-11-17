@@ -33,5 +33,10 @@ namespace Practica_N__7
             deco5 = new DecoradorAlumnoAsteriscos(deco4);
             return (Alumno)deco5;
         }
+
+        public override Comparable CrearTomandoDatos()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -6,13 +6,19 @@ using System.Threading.Tasks;
 
 namespace Practica_N__7
 {
-    public class GeneradorDeDatosAleaorios : Manejador
+    public class GeneradorDeDatosAletorios : Manejador
     {
         private Random random;
+        private static GeneradorDeDatosAletorios _aleatorio;
 
-        public GeneradorDeDatosAleaorios(Manejador manejador) : base(manejador)
+        private GeneradorDeDatosAletorios(Manejador manejador) : base(manejador)
         {
             random = new Random();
+        }
+
+        public static GeneradorDeDatosAletorios getInstancia(Manejador manejador)
+        {
+            return _aleatorio = new GeneradorDeDatosAletorios(manejador);
         }
 
         public override int NumeroAleatorio(int max) 

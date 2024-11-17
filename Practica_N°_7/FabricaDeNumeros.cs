@@ -20,5 +20,10 @@ namespace Practica_N__7
             int n = manejador.NumeroPorTeclado();
             return new Numero(n);
         }
+
+        public override Comparable CrearTomandoDatos()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

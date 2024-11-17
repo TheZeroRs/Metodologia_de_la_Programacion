@@ -8,12 +8,19 @@ namespace Practica_N__7
 {
     public class LectorDeDatos: Manejador
     {
-       public LectorDeDatos(Manejador manejador) : base(manejador)
+       private static LectorDeDatos _intancia;
+       private LectorDeDatos(Manejador manejador) : base(manejador)
        {
 
        }
-       public override int NumeroPorTeclado()
-       {
+
+        public static LectorDeDatos getInstancia(Manejador manejador)
+        {
+            return _intancia = new LectorDeDatos(manejador);
+        }
+
+        public override int NumeroPorTeclado()
+        {
             int numero;
             while(true) 
             {

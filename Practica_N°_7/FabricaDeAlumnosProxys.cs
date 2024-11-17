@@ -23,5 +23,10 @@ namespace Practica_N__7
 
             return new AlumnoProxy(nombre, 1);
         }
+
+        public override Comparable CrearTomandoDatos()
+        {
+            return new AlumnoProxy(manejador.stringDesdeArchivo(5),1);
+        }
     }
 }
