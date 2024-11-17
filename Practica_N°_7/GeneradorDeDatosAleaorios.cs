@@ -6,21 +6,21 @@ using System.Threading.Tasks;
 
 namespace Practica_N__7
 {
-    public class GeneradorDeDatosAleaorios
+    public class GeneradorDeDatosAleaorios : Manejador
     {
         private Random random;
 
-        public GeneradorDeDatosAleaorios()
+        public GeneradorDeDatosAleaorios(Manejador manejador) : base(manejador)
         {
             random = new Random();
         }
 
-        public int NumeroAleatorio(int max) 
+        public override int NumeroAleatorio(int max) 
         {
             return random.Next(0, max + 1);
         }
 
-        public string StringAleatorio(int cant) 
+        public override string StringAleatorio(int cant) 
         {
             const string chars = "abcdefghijklmnopqrstuvwxyz";
             StringBuilder stringBuilder = new StringBuilder(cant);

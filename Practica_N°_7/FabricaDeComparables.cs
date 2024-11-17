@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ObtencionDeDatos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,13 +10,12 @@ namespace Practica_N__7
     public abstract class FabricaDeComparables
     {
 
-        protected GeneradorDeDatosAleaorios generador;
-        protected LectorDeDatos lector;
+        protected Manejador manejador;
+        
 
         public FabricaDeComparables()
         {
-            this.generador = new GeneradorDeDatosAleaorios();
-            this.lector = new LectorDeDatos();
+            this.manejador = CrearCadenaDeResponsabilidades();
         }
 
         public static Comparable CrearAleatorio(int opc) 
@@ -64,6 +64,14 @@ namespace Practica_N__7
         }
 
         public abstract Comparable CrearPorTeclado();
+
+        public static Manejador CrearCadenaDeResponsabilidades()
+        {
+            Manejador manejador = new LectorDeArchivos(null);
+            manejador = new GeneradorDeDatosAleaorios(manejador);
+            manejador = new LectorDeDatos(manejador);
+            return manejador;
+        }
 
     }
 

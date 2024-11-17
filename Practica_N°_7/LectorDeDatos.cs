@@ -6,9 +6,13 @@ using System.Threading.Tasks;
 
 namespace Practica_N__7
 {
-    public class LectorDeDatos
+    public class LectorDeDatos: Manejador
     {
-       public int NumeroPorTeclado()
+       public LectorDeDatos(Manejador manejador) : base(manejador)
+       {
+
+       }
+       public override int NumeroPorTeclado()
        {
             int numero;
             while(true) 
@@ -26,7 +30,7 @@ namespace Practica_N__7
             }
        }
 
-       public string StringPorTeclado() 
+       public override string StringPorTeclado() 
         {
             Console.WriteLine("Ingrese un texto: ");
             return Console.ReadLine();

@@ -1,5 +1,6 @@
 ﻿using MetodologíasDeProgramaciónI;
 using System;
+using ObtencionDeDatos;
 
 namespace Practica_N__7
 {
@@ -8,14 +9,31 @@ namespace Practica_N__7
 
         static void Main(string[] args)
         {
-            Pila pila = new Pila();
-            Aula aula = new Aula();
-            pila.setOrdenInicio(new OrdenInicio(aula));
-            pila.setOrdenLlegaAlumno(new OrdenLlegaAlumno(aula));
-            pila.setOrdenAulaLlena(new OrdenAulaLlena(aula));
-            Llenar(pila, 1);
-            Llenar(pila, 3);
-            Llenar(pila, 6);
+            //Pila pila = new Pila();
+            //Aula aula = new Aula();
+            //pila.setOrdenInicio(new OrdenInicio(aula));
+            //pila.setOrdenLlegaAlumno(new OrdenLlegaAlumno(aula));
+            //pila.setOrdenAulaLlena(new OrdenAulaLlena(aula));
+            //Llenar(pila, 1);
+            //Llenar(pila, 3);
+            //Llenar(pila, 6);
+
+            Manejador manejador = CrearCadenaDeResponsabilidades();
+
+
+            Comparable com = FabricaDeComparables.CrearAleatorio(1);
+
+            Console.ReadKey();
+        }
+
+
+        public static Manejador CrearCadenaDeResponsabilidades() 
+        {
+            Manejador manejador = new GeneradorDeDatosAleaorios(null);
+            manejador = new LectorDeDatos(manejador);
+            manejador = new LectorDeArchivos(manejador);
+            return manejador;
+
         }
 
 

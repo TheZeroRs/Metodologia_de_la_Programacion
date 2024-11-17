@@ -11,7 +11,7 @@ namespace Practica_N__7
     {
         public override Comparable CrearAleatorio()
         {
-            return new AlumnoProxy(generador.StringAleatorio(5),1); 
+            return new AlumnoProxy(manejador.StringAleatorio(5),1); 
         }
 
         public override Comparable CrearPorTeclado()
@@ -19,7 +19,7 @@ namespace Practica_N__7
             Console.Write("Ingresar datos del nuevo alumno. \n");
 
             Console.Write("Ingresar nombre del alumno: ");
-            string nombre = lector.StringPorTeclado();
+            string nombre = manejador.StringPorTeclado();
 
             return new AlumnoProxy(nombre, 1);
         }
