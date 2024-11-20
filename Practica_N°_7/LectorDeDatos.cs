@@ -16,7 +16,12 @@ namespace Practica_N__7
 
         public static LectorDeDatos getInstancia(Manejador manejador)
         {
-            return _intancia = new LectorDeDatos(manejador);
+            if (_intancia == null) 
+            {
+                return _intancia = new LectorDeDatos(manejador);
+            }
+            return _intancia;
+            
         }
 
         public override int NumeroPorTeclado()

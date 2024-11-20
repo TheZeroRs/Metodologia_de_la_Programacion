@@ -18,7 +18,12 @@ namespace Practica_N__7
 
         public static GeneradorDeDatosAletorios getInstancia(Manejador manejador)
         {
-            return _aleatorio = new GeneradorDeDatosAletorios(manejador);
+            if (_aleatorio == null) 
+            {
+                return _aleatorio = new GeneradorDeDatosAletorios(manejador); 
+            }
+            return _aleatorio;
+            
         }
 
         public override int NumeroAleatorio(int max) 
